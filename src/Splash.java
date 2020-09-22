@@ -73,6 +73,12 @@ public class Splash extends JFrame implements ActionListener {
            
         }
 
+        @Override
+        public void actionPerformed(ActionEvent e) {
+        
+
+        }
+
 
 
            

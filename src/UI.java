@@ -171,7 +171,7 @@ public class UI {
         back.setSize (220,130);
         back.setBorderPainted(false);
         ImageIcon backOn = new ImageIcon("img/button.png");
-        back.setIcon(back);
+        //back.setIcon(back);
         ImageIcon backOff = new ImageIcon("");
         back.setRolloverIcon(backOn);
     }
