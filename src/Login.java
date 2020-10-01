@@ -7,7 +7,7 @@ public class Login extends JFrame implements ActionListener {
     JLabel user_label, password_label, message;
     JTextField userName_text;
     JPasswordField password_text;
-    JButton submit, cancel;
+    JButton submit, cancel, register;
     
     Login() {
        
@@ -23,21 +23,28 @@ public class Login extends JFrame implements ActionListener {
        
        // Submit
        submit = new JButton("LOGIN");
-       panel = new JPanel(new GridLayout(3, 1));
+       register = new JButton("REGISTER");
+       panel = new JPanel(new GridLayout(4, 1));
        panel.add(user_label);
        panel.add(userName_text);
        panel.add(password_label);
        panel.add(password_text);
        message = new JLabel();
+       panel.add(register);
+
+       panel.add(submit);  
        panel.add(message);
-       panel.add(submit);
        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+      
+     
        
        // Adding listeners
        submit.addActionListener(this);
        add(panel, BorderLayout.CENTER);
        setTitle("Project Lumen");
        setSize(450,350);
+       setLocation(600, 250);
        setVisible(true);
     }
     
