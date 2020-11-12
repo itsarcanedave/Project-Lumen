@@ -28,29 +28,173 @@ public class UI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        burger = new javax.swing.JLabel();
+        about = new javax.swing.JLabel();
+        wotd = new javax.swing.JLabel();
+        help = new javax.swing.JLabel();
+        wotdLabel = new javax.swing.JLabel();
+        aboutLabel = new javax.swing.JLabel();
+        history = new javax.swing.JLabel();
+        historyLabel = new javax.swing.JLabel();
+        helpLabel = new javax.swing.JLabel();
+        sidebar = new javax.swing.JLabel();
+        blurBg = new javax.swing.JLabel();
+        translate = new javax.swing.JLabel();
+        define = new javax.swing.JLabel();
+        exit = new javax.swing.JLabel();
+        UIbg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1540, 840));
+        getContentPane().setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ui.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        jLabel1.setMaximumSize(new java.awt.Dimension(1540, 840));
-        jLabel1.setMinimumSize(new java.awt.Dimension(1540, 840));
-        jLabel1.setPreferredSize(new java.awt.Dimension(1540, 840));
+        jPanel2.setLayout(null);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        burger.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/2. Burger Icon.png"))); // NOI18N
+        burger.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                burgerMouseClicked(evt);
+            }
+        });
+        jPanel2.add(burger);
+        burger.setBounds(40, 20, 60, 60);
+
+        about.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/about.png"))); // NOI18N
+        jPanel2.add(about);
+        about.setBounds(60, 480, 56, 60);
+
+        wotd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/wotd.png"))); // NOI18N
+        jPanel2.add(wotd);
+        wotd.setBounds(50, 150, 50, 56);
+
+        help.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/help.png"))); // NOI18N
+        jPanel2.add(help);
+        help.setBounds(60, 370, 56, 60);
+
+        wotdLabel.setFont(new java.awt.Font("Fira Sans", 0, 24)); // NOI18N
+        wotdLabel.setForeground(new java.awt.Color(255, 255, 255));
+        wotdLabel.setText("Word of the Day");
+        jPanel2.add(wotdLabel);
+        wotdLabel.setBounds(140, 150, 190, 60);
+
+        aboutLabel.setFont(new java.awt.Font("Fira Sans", 0, 24)); // NOI18N
+        aboutLabel.setForeground(new java.awt.Color(255, 255, 255));
+        aboutLabel.setText("About");
+        jPanel2.add(aboutLabel);
+        aboutLabel.setBounds(150, 480, 190, 60);
+
+        history.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/history.png"))); // NOI18N
+        jPanel2.add(history);
+        history.setBounds(60, 260, 56, 60);
+
+        historyLabel.setFont(new java.awt.Font("Fira Sans", 0, 24)); // NOI18N
+        historyLabel.setForeground(new java.awt.Color(255, 255, 255));
+        historyLabel.setText("History");
+        jPanel2.add(historyLabel);
+        historyLabel.setBounds(150, 260, 190, 60);
+
+        helpLabel.setFont(new java.awt.Font("Fira Sans", 0, 24)); // NOI18N
+        helpLabel.setForeground(new java.awt.Color(255, 255, 255));
+        helpLabel.setText("Help");
+        jPanel2.add(helpLabel);
+        helpLabel.setBounds(150, 370, 190, 60);
+
+        sidebar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/sidebar.png")));
+        jPanel2.add(sidebar);
+        sidebar.setBounds(0, 115, 380, 695);
+        sidebar.setVisible(false);
+        wotd.setVisible(false);
+        history.setVisible(false);
+        help.setVisible(false);
+        about.setVisible(false);
+        wotdLabel.setVisible(false);
+        historyLabel.setVisible(false);
+        helpLabel.setVisible(false);
+        aboutLabel.setVisible(false);
+
+        blurBg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/blur.png")));
+        blurBg.setMaximumSize(new java.awt.Dimension(1540, 840));
+        blurBg.setMinimumSize(new java.awt.Dimension(1540, 840));
+        jPanel2.add(blurBg);
+        blurBg.setBounds(0, 0, 1580, 870);
+        blurBg.setVisible(false);
+
+        translate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/4. Translate Button.png"))); // NOI18N
+        translate.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                translateMouseClicked(evt);
+            }
+        });
+        jPanel2.add(translate);
+        translate.setBounds(920, 370, 430, 170);
+
+        define.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/3. Define Button.png"))); // NOI18N
+        define.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                defineMouseClicked(evt);
+            }
+        });
+        jPanel2.add(define);
+        define.setBounds(920, 160, 410, 160);
+
+        exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/5. Exit Button.png"))); // NOI18N
+        exit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exitMouseClicked(evt);
+            }
+        });
+        jPanel2.add(exit);
+        exit.setBounds(920, 580, 400, 170);
+
+        UIbg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ui.png"))); // NOI18N
+        jPanel2.add(UIbg);
+        UIbg.setBounds(0, 0, 1620, 840);
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 0, 1580, 840);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void burgerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_burgerMouseClicked
+        if (sidebar.isVisible()) {
+            sidebar.setVisible(false);
+            blurBg.setVisible(false);
+            wotd.setVisible(false);
+            history.setVisible(false);
+            help.setVisible(false);
+            about.setVisible(false);
+            wotdLabel.setVisible(false);
+            historyLabel.setVisible(false);
+            helpLabel.setVisible(false);
+            aboutLabel.setVisible(false);
+        } else {
+            sidebar.setVisible(true);
+            blurBg.setVisible(true);
+            wotd.setVisible(true);
+            history.setVisible(true);
+            help.setVisible(true);
+            about.setVisible(true);
+            wotdLabel.setVisible(true);
+            historyLabel.setVisible(true);
+            helpLabel.setVisible(true);
+            aboutLabel.setVisible(true);
+        }
+              // TODO add your handling code here:
+    }//GEN-LAST:event_burgerMouseClicked
+
+    private void defineMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_defineMouseClicked
+       new Define().setVisible(true); // TODO add your handling code here:
+    }//GEN-LAST:event_defineMouseClicked
+
+    private void translateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_translateMouseClicked
+        new Translate().setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_translateMouseClicked
+
+    private void exitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseClicked
+        new Login().setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_exitMouseClicked
 
     /**
      * @param args the command line arguments
@@ -88,6 +232,21 @@ public class UI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel UIbg;
+    private javax.swing.JLabel about;
+    private javax.swing.JLabel aboutLabel;
+    private javax.swing.JLabel blurBg;
+    private javax.swing.JLabel burger;
+    private javax.swing.JLabel define;
+    private javax.swing.JLabel exit;
+    private javax.swing.JLabel help;
+    private javax.swing.JLabel helpLabel;
+    private javax.swing.JLabel history;
+    private javax.swing.JLabel historyLabel;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel sidebar;
+    private javax.swing.JLabel translate;
+    private javax.swing.JLabel wotd;
+    private javax.swing.JLabel wotdLabel;
     // End of variables declaration//GEN-END:variables
 }

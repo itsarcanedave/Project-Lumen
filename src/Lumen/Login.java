@@ -32,9 +32,9 @@ public class Login extends javax.swing.JFrame {
         userIcon = new javax.swing.JLabel();
         username = new javax.swing.JTextField();
         passwordIcon = new javax.swing.JLabel();
-        pwdPlc = new javax.swing.JTextField();
-        forgotPass = new javax.swing.JLabel();
+        pwdPlace = new javax.swing.JTextField();
         password = new javax.swing.JPasswordField();
+        forgotPass = new javax.swing.JLabel();
         signIn = new javax.swing.JButton();
         signUp = new javax.swing.JButton();
         background = new javax.swing.JLabel();
@@ -79,28 +79,15 @@ public class Login extends javax.swing.JFrame {
         jPanel1.add(passwordIcon);
         passwordIcon.setBounds(850, 430, 80, 60);
 
-        pwdPlc.setFont(new java.awt.Font("Fira Sans", 0, 28)); // NOI18N
-        pwdPlc.setForeground(new java.awt.Color(211, 211, 211));
-        pwdPlc.setText("Password");
-        pwdPlc.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pwdPlcMouseEntered(evt);
+        pwdPlace.setFont(new java.awt.Font("Fira Sans", 0, 28)); // NOI18N
+        pwdPlace.setText("Password");
+        pwdPlace.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pwdPlaceMouseClicked(evt);
             }
         });
-        pwdPlc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pwdPlcActionPerformed(evt);
-            }
-        });
-        jPanel1.add(pwdPlc);
-        pwdPlc.setBounds(930, 430, 360, 60);
-
-        forgotPass.setFont(new java.awt.Font("Fira Sans", 0, 14)); // NOI18N
-        forgotPass.setForeground(new java.awt.Color(255, 255, 255));
-        forgotPass.setText("Forgot your password?");
-        forgotPass.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(forgotPass);
-        forgotPass.setBounds(1010, 520, 150, 18);
+        jPanel1.add(pwdPlace);
+        pwdPlace.setBounds(930, 430, 350, 60);
 
         password.setFont(new java.awt.Font("Fira Sans", 0, 28)); // NOI18N
         password.addActionListener(new java.awt.event.ActionListener() {
@@ -110,6 +97,13 @@ public class Login extends javax.swing.JFrame {
         });
         jPanel1.add(password);
         password.setBounds(930, 430, 360, 60);
+
+        forgotPass.setFont(new java.awt.Font("Fira Sans", 0, 14)); // NOI18N
+        forgotPass.setForeground(new java.awt.Color(255, 255, 255));
+        forgotPass.setText("Forgot your password?");
+        forgotPass.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(forgotPass);
+        forgotPass.setBounds(1010, 520, 150, 18);
 
         signIn.setBackground(new java.awt.Color(255, 255, 255));
         signIn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/sign-in.png"))); // NOI18N
@@ -134,6 +128,11 @@ public class Login extends javax.swing.JFrame {
         signUp.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         signUp.setBorderPainted(false);
         signUp.setOpaque(false);
+        signUp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signUpMouseClicked(evt);
+            }
+        });
         signUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 signUpActionPerformed(evt);
@@ -192,14 +191,6 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordActionPerformed
 
-    private void pwdPlcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwdPlcActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pwdPlcActionPerformed
-
-    private void pwdPlcMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdPlcMouseEntered
-        pwdPlc.setVisible(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_pwdPlcMouseEntered
-
     private void backgroundMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backgroundMouseEntered
         // TODO add your handling code here:
     }//GEN-LAST:event_backgroundMouseEntered
@@ -223,6 +214,16 @@ public class Login extends javax.swing.JFrame {
     private void signInMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signInMouseClicked
     new UI().setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_signInMouseClicked
+
+    private void signUpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpMouseClicked
+   new Register().setVisible(true);
+    // TODO add your handling code here:
+    }//GEN-LAST:event_signUpMouseClicked
+
+    private void pwdPlaceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pwdPlaceMouseClicked
+    pwdPlace.setVisible(false);
+    password.setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_pwdPlaceMouseClicked
 
     /**
      * @param args the command line arguments
@@ -265,7 +266,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField password;
     private javax.swing.JLabel passwordIcon;
-    private javax.swing.JTextField pwdPlc;
+    private javax.swing.JTextField pwdPlace;
     private javax.swing.JButton signIn;
     private javax.swing.JButton signUp;
     private javax.swing.JLabel userIcon;
